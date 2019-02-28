@@ -10,4 +10,4 @@ $ sudo cp switch.sh /usr/local/bin/switch && sudo chmod +x /usr/local/bin/switch
 ```
 
 ### Usage
-![terminal image](https://user-images.githubusercontent.com/20358070/53591206-c140ee00-3b93-11e9-8329-3ca2607e2a4d.png)
+![terminal image](https://user-images.githubusercontent.com/20358070/53591650-c8b4c700-3b94-11e9-98a1-05982b2ff0f0.png)
