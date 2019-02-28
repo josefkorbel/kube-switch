@@ -20,11 +20,13 @@ if [[ -z "$cluster" ]]; then
     exit 1
 fi
 
-if (( cluster - 1 < ${#clusters[@]} )) && (( cluster > 0 )); then
+if (( cluster - 1 < ${#clusters[@]} )) &&
+        (( cluster > 0 )) &&
+        [[ $cluster = *[[:digit:]]* ]]; then
+
     echo -e "\e[32mSelected cluster: ${cluster[$cluster - 1]}"
     kubectl config use-context ${clusters[$cluster - 1]}
 else
     echo -e "\e[91mOops, $cluster is not there"
     exit 1
 fi
-
