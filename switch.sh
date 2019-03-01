@@ -24,9 +24,15 @@ if (( cluster - 1 < ${#clusters[@]} )) &&
         (( cluster > 0 )) &&
         [[ $cluster = *[[:digit:]]* ]]; then
 
+    if [ "${clusters[$cluster - 1]}" == $active_cluster ]; then
+        echo -e "\e[93mCluster ${clusters[$cluster - 1]} is already active"
+        exit 0
+    fi
+
     echo -e "\e[32mSelected cluster: ${clusters[$cluster - 1]}"
     kubectl config use-context ${clusters[$cluster - 1]}
 else
     echo -e "\e[91mOops, $cluster is not there"
     exit 1
 fi
+
