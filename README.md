@@ -4,9 +4,9 @@ Small bash utility to switch between kubernetes clusters using a visual version 
 ### Installation
 
 ```sh
-$ git clone git@github.com:josefkorbel/kube-switch.git
-$ cd kube-switch/
-$ sudo cp switch.sh /usr/local/bin/switch && sudo chmod +x /usr/local/bin/switch
+git clone git@github.com:josefkorbel/kube-switch.git
+cd kube-switch/
+sudo cp switch.sh /usr/local/bin/switch && sudo chmod +x /usr/local/bin/switch
 ```
 
 ### Usage
